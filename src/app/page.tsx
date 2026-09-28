@@ -11,10 +11,12 @@ vocabularyData.forEach((pageData) => {
     if (allWordsMap.has(word.root_word)) {
       // Merge variations if root word already exists
       const existing = allWordsMap.get(word.root_word);
-      const newVariations = Array.from(new Set([...existing.variations, ...word.variations]));
+      const existingVars = existing.variations || [];
+      const newVars = word.variations || [];
+      const newVariations = Array.from(new Set([...existingVars, ...newVars]));
       allWordsMap.set(word.root_word, { ...existing, variations: newVariations });
     } else {
-      allWordsMap.set(word.root_word, { ...word });
+      allWordsMap.set(word.root_word, { ...word, variations: word.variations || [] });
     }
   });
 });
@@ -104,7 +106,7 @@ export default function Home() {
           <div className="mt-auto pt-4">
             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Variations in Text</h3>
             <div className="flex flex-wrap gap-2 justify-end mb-6" dir="rtl">
-              {item.variations.map((variant: string, vIdx: number) => (
+              {(item.variations || []).map((variant: string, vIdx: number) => (
                 <span
                   key={vIdx}
                   className="px-3 py-1.5 bg-gray-50 border border-gray-200 text-gray-800 rounded-lg font-[family-name:var(--font-amiri)] text-xl hover:border-indigo-300 hover:text-indigo-700 transition-colors"
