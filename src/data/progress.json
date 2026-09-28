@@ -185,7 +185,7 @@
   "الْجِسْم": "learned",
   "الْمُشْرِكَة": "learned",
   "الْأَذَان": "learned",
-  "الْبَاب": "learned",
-  "السَّرِيع": "learned",
+  "الْبَاب": "not_learned",
+  "السَّرِيع": "not_learned",
   "النِّكَاح": "learned"
 }
