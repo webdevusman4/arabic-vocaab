@@ -1,0 +1,243 @@
+const fs = require('fs');
+const path = require('path');
+
+const vocabFile = path.join(__dirname, 'src/data/vocabulary.json');
+let vocabData = [];
+try {
+  vocabData = JSON.parse(fs.readFileSync(vocabFile, 'utf8'));
+} catch (e) {}
+
+const newPages = [
+  {
+    page: 14,
+    words: [
+      { root_word: "الله", meaning_ur: "اللہ", meaning_en: "Allah", variations: [] },
+      { root_word: "الْقُرْآن", meaning_ur: "قرآن", meaning_en: "The Quran", variations: [] },
+      { root_word: "الْحَلَال", meaning_ur: "حلال", meaning_en: "The lawful", variations: [] },
+      { root_word: "الْكَافِر", meaning_ur: "کافر", meaning_en: "The disbeliever", variations: [] },
+      { root_word: "الرَّبّ", meaning_ur: "رب", meaning_en: "The Lord", variations: [] },
+      { root_word: "الشُّكْر", meaning_ur: "شکر", meaning_en: "The gratitude", variations: [] },
+      { root_word: "الطُّوفَان", meaning_ur: "طوفان", meaning_en: "The flood", variations: [] },
+      { root_word: "الذِّكْر", meaning_ur: "ذکر", meaning_en: "The remembrance", variations: [] },
+      { root_word: "الْخَيْر", meaning_ur: "خیر", meaning_en: "The good", variations: [] },
+      { root_word: "السُّورَة", meaning_ur: "سورۃ", meaning_en: "The chapter", variations: [] },
+      { root_word: "الْحَمْد", meaning_ur: "حمد", meaning_en: "The praise", variations: [] },
+      { root_word: "الْحَشْر", meaning_ur: "حشر", meaning_en: "The gathering", variations: [] },
+      { root_word: "مُحَمَّد", meaning_ur: "محمد", meaning_en: "Muhammad", variations: [] },
+      { root_word: "الْكَعْبَة", meaning_ur: "کعبہ", meaning_en: "The Kaaba", variations: [] },
+      { root_word: "الْحَرَام", meaning_ur: "حرام", meaning_en: "The forbidden", variations: [] },
+      { root_word: "الْفَسَاد", meaning_ur: "فساد", meaning_en: "The corruption", variations: [] },
+      { root_word: "الْخَالِق", meaning_ur: "خالق", meaning_en: "The Creator", variations: [] },
+      { root_word: "الشَّيْطَان", meaning_ur: "شیطان", meaning_en: "The Satan", variations: [] },
+      { root_word: "الْحَقّ", meaning_ur: "حق", meaning_en: "The truth", variations: [] },
+      { root_word: "الشِّرْك", meaning_ur: "شرک", meaning_en: "The polytheism", variations: [] },
+      { root_word: "الشَّرّ", meaning_ur: "شر", meaning_en: "The evil", variations: [] },
+      { root_word: "الزَّكَاة", meaning_ur: "زکوٰۃ", meaning_en: "The charity", variations: [] },
+      { root_word: "الْجَزَاء", meaning_ur: "جزا", meaning_en: "The reward", variations: [] },
+      { root_word: "الْمُقَدَّس", meaning_ur: "مقدس", meaning_en: "The sacred", variations: [] },
+      { root_word: "الْإِسْلَام", meaning_ur: "اسلام", meaning_en: "The Islam", variations: [] },
+      { root_word: "الْجَنَّة", meaning_ur: "جنت", meaning_en: "The paradise", variations: [] },
+      { root_word: "الْمُؤْمِن", meaning_ur: "مومن", meaning_en: "The believer", variations: [] },
+      { root_word: "الصُّلْح", meaning_ur: "صلح", meaning_en: "The peace", variations: [] },
+      { root_word: "اللِّبَاس", meaning_ur: "لباس", meaning_en: "The clothing", variations: [] },
+      { root_word: "مُوسَى", meaning_ur: "موسیٰ", meaning_en: "Musa", variations: [] },
+      { root_word: "الْبَاطِل", meaning_ur: "باطل", meaning_en: "The falsehood", variations: [] },
+      { root_word: "التَّوْبَة", meaning_ur: "توبہ", meaning_en: "The repentance", variations: [] },
+      { root_word: "الْوَالِد", meaning_ur: "والد", meaning_en: "The father", variations: [] },
+      { root_word: "الدِّين", meaning_ur: "دین", meaning_en: "The religion", variations: [] },
+      { root_word: "فِرْعَوْن", meaning_ur: "فرعون", meaning_en: "Pharaoh", variations: [] },
+      { root_word: "الْمُبَارَك", meaning_ur: "مبارک", meaning_en: "The blessed", variations: [] }
+    ]
+  },
+  {
+    page: 16,
+    words: [
+      { root_word: "الْحَجّ", meaning_ur: "حج", meaning_en: "The Hajj", variations: [] },
+      { root_word: "الْكَلَام", meaning_ur: "کلام", meaning_en: "The speech", variations: [] },
+      { root_word: "الرَّسُول", meaning_ur: "رسول", meaning_en: "The messenger", variations: [] },
+      { root_word: "الْعَمَل", meaning_ur: "عمل", meaning_en: "The action", variations: [] },
+      { root_word: "الْقَمَر", meaning_ur: "قمر", meaning_en: "The moon", variations: [] },
+      { root_word: "الْمَسْجِد", meaning_ur: "مسجد", meaning_en: "The mosque", variations: [] },
+      { root_word: "الْإِبْن", meaning_ur: "بیٹا", meaning_en: "The son", variations: [] },
+      { root_word: "الْعِزَّة", meaning_ur: "عزت", meaning_en: "The honor", variations: [] },
+      { root_word: "الْمَغْفِرَة", meaning_ur: "مغفرت", meaning_en: "The forgiveness", variations: [] },
+      { root_word: "الطُّلُوع", meaning_ur: "طلوع", meaning_en: "The rising", variations: [] },
+      { root_word: "الْآيَة", meaning_ur: "آیت", meaning_en: "The verse", variations: [] },
+      { root_word: "الْمَرَض", meaning_ur: "مرض", meaning_en: "The disease", variations: [] },
+      { root_word: "الْجِهَاد", meaning_ur: "جہاد", meaning_en: "The striving", variations: [] },
+      { root_word: "الْمُجَاهِد", meaning_ur: "مجاہد", meaning_en: "The striver", variations: [] },
+      { root_word: "النَّبِيّ", meaning_ur: "نبی", meaning_en: "The prophet", variations: [] },
+      { root_word: "الْعَدْل", meaning_ur: "عدل", meaning_en: "The justice", variations: [] },
+      { root_word: "الْعَرْش", meaning_ur: "عرش", meaning_en: "The throne", variations: [] },
+      { root_word: "الْيَتِيم", meaning_ur: "یتیم", meaning_en: "The orphan", variations: [] },
+      { root_word: "الْمِيزَان", meaning_ur: "ترازو", meaning_en: "The balance", variations: [] },
+      { root_word: "الذِّلَّة", meaning_ur: "ذلت", meaning_en: "The humiliation", variations: [] },
+      { root_word: "الْمَشْرِق", meaning_ur: "مشرق", meaning_en: "The east", variations: [] },
+      { root_word: "الْغُرُوب", meaning_ur: "غروب", meaning_en: "The setting", variations: [] },
+      { root_word: "الْعُمْرَة", meaning_ur: "عمرہ", meaning_en: "The Umrah", variations: [] },
+      { root_word: "الشِّفَاء", meaning_ur: "شفا", meaning_en: "The cure", variations: [] },
+      { root_word: "الْجَوَاب", meaning_ur: "جواب", meaning_en: "The answer", variations: [] },
+      { root_word: "الْمُهَاجِر", meaning_ur: "مہاجر", meaning_en: "The emigrant", variations: [] },
+      { root_word: "الْمُنَافِق", meaning_ur: "منافق", meaning_en: "The hypocrite", variations: [] },
+      { root_word: "اللَّعْنَة", meaning_ur: "لعنت", meaning_en: "The curse", variations: [] },
+      { root_word: "النَّدَامَة", meaning_ur: "ندامت", meaning_en: "The regret", variations: [] },
+      { root_word: "الْعِبْرَة", meaning_ur: "عبرت", meaning_en: "The lesson", variations: [] },
+      { root_word: "الْمُصِيبَة", meaning_ur: "مصیبت", meaning_en: "The calamity", variations: [] },
+      { root_word: "الرِّزْق", meaning_ur: "رزق", meaning_en: "The provision", variations: [] },
+      { root_word: "الْمَغْرِب", meaning_ur: "مغرب", meaning_en: "The west", variations: [] },
+      { root_word: "السَّفَر", meaning_ur: "سفر", meaning_en: "The journey", variations: [] },
+      { root_word: "الْفِرَاق", meaning_ur: "فراق، جدائی", meaning_en: "The separation", variations: [] },
+      { root_word: "الذَّرَّة", meaning_ur: "ذرہ", meaning_en: "The atom", variations: [] }
+    ]
+  },
+  {
+    page: 18,
+    words: [
+      { root_word: "الْإِيْمَان", meaning_ur: "ایمان", meaning_en: "The faith", variations: [] },
+      { root_word: "التَّوْفِيق", meaning_ur: "توفیق", meaning_en: "The success/guidance", variations: [] },
+      { root_word: "الْجِسْم", meaning_ur: "جسم", meaning_en: "The body", variations: [] },
+      { root_word: "الْمُشْرِكَة", meaning_ur: "مشرکہ", meaning_en: "The polytheist female", variations: [] },
+      { root_word: "الْأَذَان", meaning_ur: "اذان", meaning_en: "The call to prayer", variations: [] },
+      { root_word: "الْقَسَم", meaning_ur: "قسم", meaning_en: "The oath", variations: [] },
+      { root_word: "الْخَبَر", meaning_ur: "خبر", meaning_en: "The news", variations: [] },
+      { root_word: "السُّؤَال", meaning_ur: "سوال", meaning_en: "The question", variations: [] },
+      { root_word: "الشَّفَاعَة", meaning_ur: "شفاعت، سفارش", meaning_en: "The intercession", variations: [] },
+      { root_word: "الْإِحْسَان", meaning_ur: "احسان", meaning_en: "The excellence/goodness", variations: [] },
+      { root_word: "الْحُبّ", meaning_ur: "حب", meaning_en: "The love", variations: [] },
+      { root_word: "الطَّاقَة", meaning_ur: "طاقت، بس", meaning_en: "The power/capacity", variations: [] },
+      { root_word: "الظُّلْم", meaning_ur: "ظلم", meaning_en: "The oppression", variations: [] },
+      { root_word: "الْعَرَبِي", meaning_ur: "عربی", meaning_en: "The Arab/Arabic", variations: [] },
+      { root_word: "الْإِنْسَان", meaning_ur: "انسان", meaning_en: "The human", variations: [] },
+      { root_word: "النَّهَر", meaning_ur: "نہر", meaning_en: "The river", variations: [] },
+      { root_word: "الْجُمُعَة", meaning_ur: "جمعہ", meaning_en: "The Friday", variations: [] },
+      { root_word: "الْفِتْنَة", meaning_ur: "فتنہ", meaning_en: "The trial/tribulation", variations: [] },
+      { root_word: "الْقَتْل", meaning_ur: "قتل", meaning_en: "The killing", variations: [] },
+      { root_word: "الصَّفّ", meaning_ur: "صف", meaning_en: "The row/line", variations: [] },
+      { root_word: "الْقَبْر", meaning_ur: "قبر", meaning_en: "The grave", variations: [] },
+      { root_word: "التِّلَاوَة", meaning_ur: "تلاوت", meaning_en: "The recitation", variations: [] },
+      { root_word: "الْبَاب", meaning_ur: "باب", meaning_en: "The door", variations: [] },
+      { root_word: "الْمَتَاع", meaning_ur: "سامان", meaning_en: "The provision/goods", variations: [] },
+      { root_word: "الْقِبْلَة", meaning_ur: "قبلہ", meaning_en: "The Qibla", variations: [] },
+      { root_word: "السَّرِيع", meaning_ur: "سریع، تیز", meaning_en: "The swift/fast", variations: [] },
+      { root_word: "الْمُؤْمِنَة", meaning_ur: "مومنہ", meaning_en: "The believer female", variations: [] },
+      { root_word: "الْبَحْر", meaning_ur: "بحر", meaning_en: "The sea", variations: [] },
+      { root_word: "الْحَسْرَة", meaning_ur: "حسرت، پچھتاوا", meaning_en: "The regret", variations: [] },
+      { root_word: "الْكُفْر", meaning_ur: "کفر", meaning_en: "The disbelief", variations: [] },
+      { root_word: "النِّكَاح", meaning_ur: "نکاح", meaning_en: "The marriage", variations: [] },
+      { root_word: "الْوَصِيَّة", meaning_ur: "وصیت", meaning_en: "The will/bequest", variations: [] },
+      { root_word: "النَّفْع", meaning_ur: "نفع", meaning_en: "The benefit", variations: [] },
+      { root_word: "الْخَلِيفَة", meaning_ur: "خلیفہ", meaning_en: "The caliph/successor", variations: [] },
+      { root_word: "الشَّرِيك", meaning_ur: "شریک", meaning_en: "The partner", variations: [] },
+      { root_word: "الْقِتَال", meaning_ur: "جنگ", meaning_en: "The fighting", variations: [] }
+    ]
+  },
+  {
+    page: 52,
+    words: [
+      { root_word: "إِنَّ اللَّهَ", meaning_ur: "بے شک اللہ", meaning_en: "Indeed Allah", variations: [] },
+      { root_word: "إِنَّ الصَّلَاةَ", meaning_ur: "بے شک نماز", meaning_en: "Indeed the prayer", variations: [] },
+      { root_word: "إِنَّ الشَّيْطَانَ", meaning_ur: "بے شک شیطان", meaning_en: "Indeed Satan", variations: [] },
+      { root_word: "إِنَّ الْأَرْضَ", meaning_ur: "بے شک زمین", meaning_en: "Indeed the earth", variations: [] },
+      { root_word: "إِنَّ السَّاعَةَ", meaning_ur: "بے شک قیامت", meaning_en: "Indeed the hour", variations: [] },
+      { root_word: "إِنَّ الْعَهْدَ", meaning_ur: "بے شک عہد", meaning_en: "Indeed the covenant", variations: [] },
+      { root_word: "إِنَّ ثَمُودَ", meaning_ur: "بے شک ثمود", meaning_en: "Indeed Thamud", variations: [] },
+      { root_word: "إِنَّ الدِّينَ", meaning_ur: "بے شک دین", meaning_en: "Indeed the religion", variations: [] },
+      { root_word: "إِنَّ الْهُدَى", meaning_ur: "بے شک ہدایت", meaning_en: "Indeed the guidance", variations: [] },
+      { root_word: "إِنَّ الْإِنْسَانَ", meaning_ur: "بے شک انسان", meaning_en: "Indeed the human", variations: [] },
+      { root_word: "إِنَّ الْعَاقِبَةَ", meaning_ur: "بے شک انجام", meaning_en: "Indeed the end", variations: [] },
+      { root_word: "إِنَّ الْخِزْيَ", meaning_ur: "بے شک رسوائی", meaning_en: "Indeed the disgrace", variations: [] },
+      { root_word: "إِنَّ هَذَا", meaning_ur: "بے شک یہ", meaning_en: "Indeed this", variations: [] },
+      { root_word: "إِنَّ يَأْجُوجَ", meaning_ur: "بے شک یاجوج", meaning_en: "Indeed Gog", variations: [] },
+      { root_word: "إِنَّ الْبَاطِلَ", meaning_ur: "بے شک باطل", meaning_en: "Indeed the falsehood", variations: [] },
+      { root_word: "إِنَّ الْعِزَّةَ", meaning_ur: "بے شک عزت", meaning_en: "Indeed the honor", variations: [] },
+      { root_word: "إِنَّ الْأَمْرَ", meaning_ur: "بے شک معاملہ", meaning_en: "Indeed the matter", variations: [] },
+      { root_word: "إِنَّ جَهَنَّمَ", meaning_ur: "بے شک جہنم", meaning_en: "Indeed Hell", variations: [] },
+      { root_word: "إِنَّ الظَّنَّ", meaning_ur: "بے شک گمان", meaning_en: "Indeed the assumption", variations: [] },
+      { root_word: "إِنَّ السَّمْعَ", meaning_ur: "بے شک سماعت", meaning_en: "Indeed the hearing", variations: [] },
+      { root_word: "إِنَّ ذَلِكَ", meaning_ur: "بے شک وہ", meaning_en: "Indeed that", variations: [] },
+      { root_word: "إِنَّ فِرْعَوْنَ", meaning_ur: "بے شک فرعون", meaning_en: "Indeed Pharaoh", variations: [] },
+      { root_word: "إِنَّ الشِّرْكَ", meaning_ur: "بے شک شرک", meaning_en: "Indeed the polytheism", variations: [] },
+      { root_word: "إِنَّ الْمَوْتَ", meaning_ur: "بے شک موت", meaning_en: "Indeed the death", variations: [] },
+      { root_word: "إِنَّ الْقَوْمَ", meaning_ur: "بے شک قوم", meaning_en: "Indeed the nation", variations: [] },
+      { root_word: "إِنَّ الْفَضْلَ", meaning_ur: "بے شک فضل", meaning_en: "Indeed the grace", variations: [] },
+      { root_word: "إِنَّ إِبْرَاهِيمَ", meaning_ur: "بے شک ابراہیم", meaning_en: "Indeed Ibrahim", variations: [] },
+      { root_word: "إِنَّ قَارُونَ", meaning_ur: "بے شک قارون", meaning_en: "Indeed Qarun", variations: [] },
+      { root_word: "إِنَّ الصَّفَا وَالْمَرْوَةَ", meaning_ur: "بے شک صفا اور مروہ", meaning_en: "Indeed Safa and Marwa", variations: [] },
+      { root_word: "إِنَّ يَأْجُوجَ وَمَأْجُوجَ", meaning_ur: "بے شک یاجوج اور ماجوج", meaning_en: "Indeed Gog and Magog", variations: [] },
+      { root_word: "إِنَّ إِبْرَاهِيمَ وَإِسْمَاعِيلَ", meaning_ur: "بے شک ابراہیم اور اسماعیل", meaning_en: "Indeed Ibrahim and Ismail", variations: [] },
+      { root_word: "إِنَّ السَّمْعَ وَالْبَصَرَ", meaning_ur: "بے شک سماعت اور بصارت", meaning_en: "Indeed hearing and sight", variations: [] },
+      { root_word: "إِنَّ فِرْعَوْنَ وَهَامَانَ", meaning_ur: "بے شک فرعون اور ہامان", meaning_en: "Indeed Pharaoh and Haman", variations: [] },
+      { root_word: "إِنَّ إِبْرَاهِيمَ وَإِسْمَاعِيلَ وَإِسْحَاقَ وَيَعْقُوبَ", meaning_ur: "بے شک ابراہیم، اسماعیل، اسحاق اور یعقوب", meaning_en: "Indeed Ibrahim, Ismail, Ishaq, and Yaqub", variations: [] }
+    ]
+  },
+  {
+    page: 54,
+    words: [
+      { root_word: "لِلَّهِ", meaning_ur: "اللہ کیلئے", meaning_en: "For Allah", variations: [] },
+      { root_word: "لِلْآخِرَةِ", meaning_ur: "آخرت کیلئے", meaning_en: "For the hereafter", variations: [] },
+      { root_word: "لِلتَّقْوَى", meaning_ur: "تقویٰ کیلئے", meaning_en: "For piety", variations: [] },
+      { root_word: "لِلزَّكَاةِ", meaning_ur: "زکوٰۃ کیلئے", meaning_en: "For charity", variations: [] },
+      { root_word: "لِلْقِتَالِ", meaning_ur: "لڑائی کیلئے", meaning_en: "For fighting", variations: [] },
+      { root_word: "لِلْحُسْنَى", meaning_ur: "اچھائی کیلئے", meaning_en: "For the good", variations: [] },
+      { root_word: "لِلشَّمْسِ", meaning_ur: "سورج کیلئے", meaning_en: "For the sun", variations: [] },
+      { root_word: "لِلْكَذِبِ", meaning_ur: "جھوٹ کیلئے", meaning_en: "For the lie", variations: [] },
+      { root_word: "لِلذَّكَرِ", meaning_ur: "مرد کیلئے", meaning_en: "For the male", variations: [] },
+      { root_word: "لِلرَّحْمَنِ", meaning_ur: "رحمٰن کیلئے", meaning_en: "For the Most Merciful", variations: [] },
+      { root_word: "لِلْإِسْلَامِ", meaning_ur: "اسلام کیلئے", meaning_en: "For Islam", variations: [] },
+      { root_word: "لِلْحَقِّ", meaning_ur: "حق کیلئے", meaning_en: "For the truth", variations: [] },
+      { root_word: "لِلصَّلَاةِ", meaning_ur: "نماز کیلئے", meaning_en: "For the prayer", variations: [] },
+      { root_word: "لِلْحَرْبِ", meaning_ur: "جنگ کیلئے", meaning_en: "For war", variations: [] },
+      { root_word: "لِلسَّائِلِ", meaning_ur: "سوالی کیلئے", meaning_en: "For the asker", variations: [] },
+      { root_word: "لِلْقَمَرِ", meaning_ur: "چاند کیلئے", meaning_en: "For the moon", variations: [] },
+      { root_word: "لِلْكُفْرِ", meaning_ur: "کفر کیلئے", meaning_en: "For the disbelief", variations: [] },
+      { root_word: "لِلْيُسْرَى", meaning_ur: "آسانی کیلئے", meaning_en: "For the ease", variations: [] },
+      { root_word: "لِلدِّينِ", meaning_ur: "دین کیلئے", meaning_en: "For the religion", variations: [] },
+      { root_word: "لِلْإِيمَانِ", meaning_ur: "ایمان کیلئے", meaning_en: "For the faith", variations: [] },
+      { root_word: "لِلْكِتَابِ", meaning_ur: "کتاب کیلئے", meaning_en: "For the book", variations: [] },
+      { root_word: "لِلشَّهَادَةِ", meaning_ur: "گواہی کیلئے", meaning_en: "For the testimony", variations: [] },
+      { root_word: "لِلنَّاسِ", meaning_ur: "لوگوں کیلئے", meaning_en: "For the people", variations: [] },
+      { root_word: "لِلسَّاعَةِ", meaning_ur: "قیامت کیلئے", meaning_en: "For the hour", variations: [] },
+      { root_word: "لِلْجَبَلِ", meaning_ur: "پہاڑ کیلئے", meaning_en: "For the mountain", variations: [] },
+      { root_word: "لِلْبَشَرِ", meaning_ur: "انسان کیلئے", meaning_en: "For the human", variations: [] },
+      { root_word: "لِلنَّبِيِّ", meaning_ur: "نبی کیلئے", meaning_en: "For the prophet", variations: [] },
+      { root_word: "لِلْإِنْسَانِ", meaning_ur: "انسان کیلئے", meaning_en: "For the human", variations: [] },
+      { root_word: "لِلسُّحْتِ", meaning_ur: "حرام کیلئے", meaning_en: "For the forbidden", variations: [] },
+      { root_word: "لِلْغَيْبِ", meaning_ur: "غیب کیلئے", meaning_en: "For the unseen", variations: [] },
+      { root_word: "لِلْخَيْرِ", meaning_ur: "خیر کیلئے", meaning_en: "For the good", variations: [] },
+      { root_word: "لِلْقَوْمِ", meaning_ur: "قوم کیلئے", meaning_en: "For the nation", variations: [] },
+      { root_word: "لِلْأَرْضِ", meaning_ur: "زمین کیلئے", meaning_en: "For the earth", variations: [] },
+      { root_word: "لِلشَّيْطَانِ", meaning_ur: "شیطان کیلئے", meaning_en: "For Satan", variations: [] },
+      { root_word: "لِلْعُسْرَى", meaning_ur: "مشکل کیلئے", meaning_en: "For the hardship", variations: [] },
+      { root_word: "لِرَسُولٍ", meaning_ur: "ایک رسول کیلئے", meaning_en: "For a messenger", variations: [] },
+      { root_word: "لِشَيْءٍ", meaning_ur: "ایک چیز کیلئے", meaning_en: "For a thing", variations: [] },
+      { root_word: "لِحَدِيثٍ", meaning_ur: "ایک بات کیلئے", meaning_en: "For a talk", variations: [] },
+      { root_word: "لِإِثْمٍ", meaning_ur: "ایک گناہ کیلئے", meaning_en: "For a sin", variations: [] },
+      { root_word: "لِنَبِيٍّ", meaning_ur: "ایک نبی کیلئے", meaning_en: "For a prophet", variations: [] },
+      { root_word: "لِقَوْمٍ", meaning_ur: "ایک قوم کیلئے", meaning_en: "For a nation", variations: [] },
+      { root_word: "لِيَوْمٍ", meaning_ur: "ایک دن کیلئے", meaning_en: "For a day", variations: [] },
+      { root_word: "لِبَلَدٍ", meaning_ur: "ایک شہر کیلئے", meaning_en: "For a city", variations: [] },
+      { root_word: "لِقِتَالٍ", meaning_ur: "ایک لڑائی کیلئے", meaning_en: "For a fight", variations: [] },
+      { root_word: "لِرَجُلٍ", meaning_ur: "ایک آدمی کیلئے", meaning_en: "For a man", variations: [] },
+      { root_word: "لِبَشَرٍ", meaning_ur: "ایک انسان کیلئے", meaning_en: "For a human", variations: [] },
+      { root_word: "لِنَفْسٍ", meaning_ur: "ایک جان کیلئے", meaning_en: "For a soul", variations: [] },
+      { root_word: "لِأَجَلٍ", meaning_ur: "ایک مدت کیلئے", meaning_en: "For a term", variations: [] },
+      { root_word: "لِشَاعِرٍ", meaning_ur: "ایک شاعر کیلئے", meaning_en: "For a poet", variations: [] },
+      { root_word: "لِمُؤْمِنٍ", meaning_ur: "ایک مومن کیلئے", meaning_en: "For a believer", variations: [] }
+    ]
+  }
+];
+
+const existingPages = new Set(vocabData.map(p => p.page));
+for (const p of newPages) {
+  if (!existingPages.has(p.page)) {
+    vocabData.push(p);
+  } else {
+      const pageIndex = vocabData.findIndex(pg => pg.page === p.page);
+      vocabData[pageIndex] = p;
+  }
+}
+
+vocabData.sort((a, b) => a.page - b.page);
+
+fs.writeFileSync(vocabFile, JSON.stringify(vocabData, null, 2));
+console.log('Successfully fixed structure for pages');
