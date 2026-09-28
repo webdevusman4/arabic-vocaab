@@ -663,6 +663,448 @@
     ]
   },
   {
+    "page": 20,
+    "words": [
+      {
+        "root": "الْمَالِك",
+        "meaning_ur": "مالک",
+        "meaning_en": "Owner",
+        "variations": []
+      },
+      {
+        "root": "الطَّرِيق",
+        "meaning_ur": "راستہ",
+        "meaning_en": "Path",
+        "variations": []
+      },
+      {
+        "root": "الْخِنْزِير",
+        "meaning_ur": "سور",
+        "meaning_en": "Pig",
+        "variations": []
+      },
+      {
+        "root": "الْمَحَبَّة",
+        "meaning_ur": "محبت",
+        "meaning_en": "Love",
+        "variations": []
+      },
+      {
+        "root": "الْمَوْت",
+        "meaning_ur": "موت",
+        "meaning_en": "Death",
+        "variations": []
+      },
+      {
+        "root": "السَّمَاء",
+        "meaning_ur": "آسمان",
+        "meaning_en": "Sky",
+        "variations": []
+      },
+      {
+        "root": "الدُّنْيَا",
+        "meaning_ur": "دنیا",
+        "meaning_en": "World",
+        "variations": []
+      },
+      {
+        "root": "الْغَيْب",
+        "meaning_ur": "غیب",
+        "meaning_en": "Unseen",
+        "variations": []
+      },
+      {
+        "root": "الْعَذَاب",
+        "meaning_ur": "عذاب",
+        "meaning_en": "Punishment",
+        "variations": []
+      },
+      {
+        "root": "النُّبُوَّة",
+        "meaning_ur": "نبوت",
+        "meaning_en": "Prophethood",
+        "variations": []
+      },
+      {
+        "root": "الطَّعَام",
+        "meaning_ur": "کھانا",
+        "meaning_en": "Food",
+        "variations": []
+      },
+      {
+        "root": "الْوَارِث",
+        "meaning_ur": "وارث",
+        "meaning_en": "Heir",
+        "variations": []
+      },
+      {
+        "root": "التَّابُوت",
+        "meaning_ur": "صندوق",
+        "meaning_en": "Chest/Ark",
+        "variations": []
+      },
+      {
+        "root": "الْقَوْم",
+        "meaning_ur": "قوم",
+        "meaning_en": "People/Nation",
+        "variations": []
+      },
+      {
+        "root": "الدُّعَاء",
+        "meaning_ur": "دعا",
+        "meaning_en": "Supplication",
+        "variations": []
+      },
+      {
+        "root": "الْقَلَم",
+        "meaning_ur": "قلم",
+        "meaning_en": "Pen",
+        "variations": []
+      },
+      {
+        "root": "الْحَيَاة",
+        "meaning_ur": "زندگی",
+        "meaning_en": "Life",
+        "variations": []
+      },
+      {
+        "root": "الْوَحْي",
+        "meaning_ur": "وحی",
+        "meaning_en": "Revelation",
+        "variations": []
+      },
+      {
+        "root": "الْآخِرَة",
+        "meaning_ur": "آخرت",
+        "meaning_en": "Hereafter",
+        "variations": []
+      },
+      {
+        "root": "النُّور",
+        "meaning_ur": "روشنی",
+        "meaning_en": "Light",
+        "variations": []
+      },
+      {
+        "root": "الْقَلْب",
+        "meaning_ur": "دل",
+        "meaning_en": "Heart",
+        "variations": []
+      },
+      {
+        "root": "الْأُمَّة",
+        "meaning_ur": "امت",
+        "meaning_en": "Nation/Community",
+        "variations": []
+      },
+      {
+        "root": "الْوَادِي",
+        "meaning_ur": "وادی",
+        "meaning_en": "Valley",
+        "variations": []
+      },
+      {
+        "root": "الْفَاجِر",
+        "meaning_ur": "گناہ گار",
+        "meaning_en": "Sinner",
+        "variations": []
+      },
+      {
+        "root": "الصِّدْق",
+        "meaning_ur": "سچائی",
+        "meaning_en": "Truth",
+        "variations": []
+      },
+      {
+        "root": "الْخَلْق",
+        "meaning_ur": "تخلیق، بناوٹ",
+        "meaning_en": "Creation",
+        "variations": []
+      },
+      {
+        "root": "الْغَمّ",
+        "meaning_ur": "غم",
+        "meaning_en": "Grief",
+        "variations": []
+      },
+      {
+        "root": "الْكِتَاب",
+        "meaning_ur": "کتاب",
+        "meaning_en": "Book",
+        "variations": []
+      },
+      {
+        "root": "الضَّرْب",
+        "meaning_ur": "ضرب، چوٹ",
+        "meaning_en": "Striking/Beating",
+        "variations": []
+      },
+      {
+        "root": "الْأَمْر",
+        "meaning_ur": "امر، معاملہ، حکم",
+        "meaning_en": "Matter/Command",
+        "variations": []
+      },
+      {
+        "root": "الْإِسْم",
+        "meaning_ur": "نام",
+        "meaning_en": "Name",
+        "variations": []
+      },
+      {
+        "root": "الْغَافِل",
+        "meaning_ur": "غافل",
+        "meaning_en": "Heedless",
+        "variations": []
+      },
+      {
+        "root": "الْحِكْمَة",
+        "meaning_ur": "حکمت",
+        "meaning_en": "Wisdom",
+        "variations": []
+      },
+      {
+        "root": "الْأَمْن",
+        "meaning_ur": "امن",
+        "meaning_en": "Security/Peace",
+        "variations": []
+      },
+      {
+        "root": "الْعَزْم",
+        "meaning_ur": "ارادہ",
+        "meaning_en": "Determination",
+        "variations": []
+      },
+      {
+        "root": "الْقَادِر",
+        "meaning_ur": "قدرت والا",
+        "meaning_en": "Capable",
+        "variations": []
+      }
+    ]
+  },
+  {
+    "page": 22,
+    "words": [
+      {
+        "root": "الْخَوْف",
+        "meaning_ur": "ڈر",
+        "meaning_en": "Fear",
+        "variations": []
+      },
+      {
+        "root": "الْوَزْن",
+        "meaning_ur": "وزن",
+        "meaning_en": "Weight",
+        "variations": []
+      },
+      {
+        "root": "الْأَرْض",
+        "meaning_ur": "زمین",
+        "meaning_en": "Earth",
+        "variations": []
+      },
+      {
+        "root": "الْكَثِير",
+        "meaning_ur": "بہت زیادہ",
+        "meaning_en": "Many/Much",
+        "variations": []
+      },
+      {
+        "root": "الْعِبَادَة",
+        "meaning_ur": "عبادت",
+        "meaning_en": "Worship",
+        "variations": []
+      },
+      {
+        "root": "الزَّوْجَة",
+        "meaning_ur": "بیوی",
+        "meaning_en": "Wife",
+        "variations": []
+      },
+      {
+        "root": "الضَّعِيف",
+        "meaning_ur": "کمزور",
+        "meaning_en": "Weak",
+        "variations": []
+      },
+      {
+        "root": "الطُّول",
+        "meaning_ur": "لمبائی",
+        "meaning_en": "Length",
+        "variations": []
+      },
+      {
+        "root": "الْعَاقِبَة",
+        "meaning_ur": "عاقبت، انجام",
+        "meaning_en": "End/Outcome",
+        "variations": []
+      },
+      {
+        "root": "الشَّرِيعَة",
+        "meaning_ur": "شریعت",
+        "meaning_en": "Law/Path",
+        "variations": []
+      },
+      {
+        "root": "الْمَيِّت",
+        "meaning_ur": "مردہ",
+        "meaning_en": "Dead",
+        "variations": []
+      },
+      {
+        "root": "الزَّلْزَلَة",
+        "meaning_ur": "زلزلہ",
+        "meaning_en": "Earthquake",
+        "variations": []
+      },
+      {
+        "root": "الْبَيْت",
+        "meaning_ur": "گھر",
+        "meaning_en": "House",
+        "variations": []
+      },
+      {
+        "root": "الْعَالِم",
+        "meaning_ur": "جاننے والا",
+        "meaning_en": "Scholar/Knower",
+        "variations": []
+      },
+      {
+        "root": "الْجَمَال",
+        "meaning_ur": "جمال، حسن",
+        "meaning_en": "Beauty",
+        "variations": []
+      },
+      {
+        "root": "الْفَرِيق",
+        "meaning_ur": "گروہ",
+        "meaning_en": "Group/Party",
+        "variations": []
+      },
+      {
+        "root": "الطَّلَاق",
+        "meaning_ur": "طلاق",
+        "meaning_en": "Divorce",
+        "variations": []
+      },
+      {
+        "root": "النَّسَب",
+        "meaning_ur": "نسب",
+        "meaning_en": "Lineage",
+        "variations": []
+      },
+      {
+        "root": "الصِّيَام",
+        "meaning_ur": "روزہ",
+        "meaning_en": "Fasting",
+        "variations": []
+      },
+      {
+        "root": "الْعَرْض",
+        "meaning_ur": "عرض، چوڑائی",
+        "meaning_en": "Width",
+        "variations": []
+      },
+      {
+        "root": "النِّعْمَة",
+        "meaning_ur": "نعمت",
+        "meaning_en": "Blessing/Favor",
+        "variations": []
+      },
+      {
+        "root": "الْخَطَأ",
+        "meaning_ur": "غلطی",
+        "meaning_en": "Mistake",
+        "variations": []
+      },
+      {
+        "root": "الْحَيّ",
+        "meaning_ur": "زندہ",
+        "meaning_en": "Alive",
+        "variations": []
+      },
+      {
+        "root": "الشَّيْء",
+        "meaning_ur": "شے، چیز",
+        "meaning_en": "Thing",
+        "variations": []
+      },
+      {
+        "root": "الْأَجْر",
+        "meaning_ur": "اجر، ثواب",
+        "meaning_en": "Reward",
+        "variations": []
+      },
+      {
+        "root": "الْمِسْكِين",
+        "meaning_ur": "مسکین",
+        "meaning_en": "Needy/Poor",
+        "variations": []
+      },
+      {
+        "root": "الْقَلِيل",
+        "meaning_ur": "تھوڑا",
+        "meaning_en": "A little/Few",
+        "variations": []
+      },
+      {
+        "root": "الْإِمَام",
+        "meaning_ur": "پیشوا",
+        "meaning_en": "Leader/Imam",
+        "variations": []
+      },
+      {
+        "root": "الرَّحْمَة",
+        "meaning_ur": "رحمت",
+        "meaning_en": "Mercy",
+        "variations": []
+      },
+      {
+        "root": "الشَّهِيد",
+        "meaning_ur": "گواہ",
+        "meaning_en": "Witness",
+        "variations": []
+      },
+      {
+        "root": "الْقَوِيّ",
+        "meaning_ur": "طاقتور",
+        "meaning_en": "Strong",
+        "variations": []
+      },
+      {
+        "root": "الْإِسْرَاف",
+        "meaning_ur": "اسراف، حد سے بڑھنا",
+        "meaning_en": "Extravagance",
+        "variations": []
+      },
+      {
+        "root": "الْجَاهِلِيَّة",
+        "meaning_ur": "جہالت",
+        "meaning_en": "Ignorance",
+        "variations": []
+      },
+      {
+        "root": "الِاتِّبَاع",
+        "meaning_ur": "اتباع، پیروی",
+        "meaning_en": "Following",
+        "variations": []
+      },
+      {
+        "root": "الْأُمّ",
+        "meaning_ur": "ماں",
+        "meaning_en": "Mother",
+        "variations": []
+      },
+      {
+        "root": "الْعَبْد",
+        "meaning_ur": "بندہ",
+        "meaning_en": "Slave/Servant",
+        "variations": []
+      }
+    ]
+  },
+  {
     "page": 52,
     "words": [
       {
