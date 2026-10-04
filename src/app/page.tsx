@@ -2,6 +2,7 @@
 
 import vocabularyData from "../data/vocabulary.json";
 import { useState, useMemo, useEffect } from "react";
+import Link from "next/link";
 
 // The vocabulary.json is now an array of { page: number, words: array }
 // Let's create a combined list for "All"
@@ -151,7 +152,13 @@ export default function Home() {
       <aside className="w-64 bg-white border-r border-gray-200 flex flex-col shadow-sm z-20 hidden md:flex shrink-0 h-full">
         <div className="p-6 border-b border-gray-100 shrink-0">
           <h2 className="text-xl font-bold text-indigo-900 tracking-tight">Vocabulary</h2>
-          <p className="text-sm text-gray-500 mt-1">Pages Explorer</p>
+          <p className="text-sm text-gray-500 mt-1 mb-4">Pages Explorer</p>
+          <Link
+            href="/unit2"
+            className="flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-indigo-600 to-indigo-800 text-white font-medium rounded-xl hover:from-indigo-700 hover:to-indigo-900 shadow-sm transition-all"
+          >
+            Unit 2 Exercises
+          </Link>
         </div>
         
         {/* Fixed Filters */}

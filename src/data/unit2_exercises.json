@@ -1,0 +1,49 @@
+[
+  {
+    "section": "إِنَّ (Indeed / Verily)",
+    "description": "Translate the following sentences containing إِنَّ",
+    "exercises": [
+      { "arabic": "إِنَّ اللَّهَ قَادِرٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ سَمِيعٌ بَصِيرٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ", "translation": "" },
+      { "arabic": "إِنَّ السَّاعَةَ آتِيَةٌ", "translation": "" },
+      { "arabic": "إِنَّ هَذِهِ تَذْكِرَةٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ مُخْرِجٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ وَاسِعٌ عَلِيمٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ غَفُورٌ شَكُورٌ", "translation": "" }
+    ]
+  },
+  {
+    "section": "فَإِنَّ (Then indeed / So verily)",
+    "description": "Translate the following sentences containing فَإِنَّ",
+    "exercises": [
+      { "arabic": "فَإِنَّ اللَّهَ عَلِيمٌ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ شَاكِرٌ عَلِيمٌ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ غَنِيٌّ حَمِيدٌ", "translation": "" },
+      { "arabic": "فَإِنَّ الْإِنْسَانَ كَفُورٌ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ غَنِيٌّ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ غَفُورٌ رَحِيمٌ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ عَزِيزٌ حَكِيمٌ", "translation": "" },
+      { "arabic": "فَإِنَّ اللَّهَ عَدُوٌّ", "translation": "" }
+    ]
+  },
+  {
+    "section": "إِنَّ ... لَ (Indeed ... surely)",
+    "description": "Translate the following sentences containing إِنَّ with emphasis لَ",
+    "exercises": [
+      { "arabic": "إِنَّ هَذَا لَسَاحِرٌ", "translation": "" },
+      { "arabic": "إِنَّ هَذَا لَشَيْءٌ", "translation": "" },
+      { "arabic": "إِنَّ ذَلِكَ لَحَقٌّ", "translation": "" },
+      { "arabic": "وَإِنَّ الدِّينَ لَوَاقِعٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ لَعَفُوٌّ غَفُورٌ", "translation": "" },
+      { "arabic": "وَإِنَّ اللَّهَ لَعَلِيمٌ حَلِيمٌ", "translation": "" },
+      { "arabic": "إِنَّ هَذَا لَسِحْرٌ", "translation": "" },
+      { "arabic": "إِنَّ هَذَا لَمَكْرٌ", "translation": "" },
+      { "arabic": "إِنَّ الْإِنْسَانَ لَظَلُومٌ", "translation": "" },
+      { "arabic": "إِنَّ إِبْرَاهِيمَ لَحَلِيمٌ", "translation": "" },
+      { "arabic": "إِنَّ اللَّهَ لَقَوِيٌّ عَزِيزٌ", "translation": "" },
+      { "arabic": "إِنَّ الْإِنْسَانَ لَكَفُورٌ", "translation": "" }
+    ]
+  }
+]
