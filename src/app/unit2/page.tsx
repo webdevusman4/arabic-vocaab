@@ -6,6 +6,12 @@ import Link from "next/link";
 
 export default function Unit2Exercises() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [showAnswers, setShowAnswers] = useState<Record<string, boolean>>({});
+
+  const toggleAnswer = (sectionIndex: number, exerciseIndex: number) => {
+    const key = `${sectionIndex}-${exerciseIndex}`;
+    setShowAnswers(prev => ({ ...prev, [key]: !prev[key] }));
+  };
 
   const handleInputChange = (sectionIndex: number, exerciseIndex: number, value: string) => {
     const key = `${sectionIndex}-${exerciseIndex}`;
@@ -54,16 +60,22 @@ export default function Unit2Exercises() {
                           {exercise.arabic}
                         </span>
                       </div>
-                      <div className="relative">
-                        <input
-                          type="text"
-                          dir="rtl"
-                          value={answers[key] || ""}
-                          onChange={(e) => handleInputChange(sIndex, eIndex, e.target.value)}
-                          placeholder="ترجمہ لکھیں..."
-                          className="w-full bg-transparent border-b-2 border-slate-300 px-2 py-3 text-2xl text-right font-[family-name:var(--font-amiri)] text-indigo-900 focus:outline-none focus:border-indigo-600 transition-all duration-300 placeholder-slate-300 focus:bg-indigo-50/50 rounded-t-lg"
-                        />
-                        <div className="absolute bottom-0 left-0 h-0.5 bg-indigo-600 w-0 group-focus-within:w-full transition-all duration-500 ease-out"></div>
+                      <div className="flex flex-col items-center justify-center gap-4 py-4 w-full">
+                        <button 
+                          onClick={() => toggleAnswer(sIndex, eIndex)}
+                          className="w-full text-lg px-6 py-3 bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700 hover:from-indigo-100 hover:to-purple-100 rounded-xl font-bold transition-all shadow-sm border border-indigo-100/50 hover:shadow-md hover:-translate-y-0.5"
+                        >
+                          {showAnswers[key] ? 'Hide Translation (ترجمہ چھپائیں)' : 'Show Translation (ترجمہ دیکھیں)'}
+                        </button>
+                        
+                        {showAnswers[key] && (
+                          <div className="text-right bg-green-50/80 p-4 rounded-xl w-full border border-green-200 shadow-sm relative overflow-hidden" dir="rtl">
+                            <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500"></div>
+                            <span className="font-[family-name:var(--font-amiri)] text-3xl text-green-900 leading-relaxed block py-2">
+                              {exercise.translation}
+                            </span>
+                          </div>
+                        )}
                       </div>
                     </div>
                   );
